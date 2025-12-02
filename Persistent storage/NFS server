@@ -1,0 +1,15 @@
+#Setup NFS server using below commands
+
+mkdir /ashdata
+
+vim /etc/exports ->  /ashdata  *(rw,no_root_squash)
+readwrite,unlimited_power
+
+systemctl restart nfs-server
+systemctl enable nfs-server
+
+exportfs -v
+
+
+systemctl stop firewalld
+systemctl disable firewalld
