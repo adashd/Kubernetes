@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: "myrs1"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: "myapp"
+  template:
+    metadata:
+      name: "mypod1"
+      labels:
+        app: "myapp"
+    spec:
+      containers:
+      - name: "c1"
+        image: "adashd/myapp:v1"
