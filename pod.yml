@@ -7,4 +7,4 @@ metadata:
 spec:
   containers:
   - name: "c1"
-    image: "vimal13/apache-webserver-php"
+    image: "adashd/myapp:v1"
